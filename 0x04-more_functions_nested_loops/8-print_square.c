@@ -1,24 +1,26 @@
-#include "main.h"
+#include <stdio.h>
 /**
- * print_square - print '#' size times as a square
- * @size: patametre n times to print
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-void print_square(int size)
+int main(void)
 {
-	int	i;
-	int j;
+	int n;
 
-	if (size <= 0)
+	for (n = 1; n <= 100; n++)
 	{
-		_putchar('\n');
-		return;
+		if ((n % 3 == 0) && (n % 5) == 0)
+			printf("FizzBuzz");
+		else if (n % 3 == 0)
+			printf("Fizz");
+		else if (n % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%d", n);
+		if (n < 100)
+			putchar(' ');
 	}
-	for (i = size; i > 0; i--)
-	{
-		for (j = size; j > 0; j--)
-		{
-			_putchar('#');
-		}
-		_putchar('\n');
-	}
+	putchar('\n');
+	return (0);
 }
