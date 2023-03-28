@@ -4,10 +4,12 @@
  * @s: string
  * return: 0
  */
+
 void print_rev(char *s)
 {
 	int longi;
 	int o;
+
 	longi = 0;
 	while (*s != '\0')
 	{
