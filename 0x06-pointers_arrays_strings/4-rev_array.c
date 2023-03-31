@@ -1,18 +1,25 @@
 #include "main.h"
-/**
- * _strcmp - copy from src to dst
- * @s1: parametre
- * @s2: parametre
- * Return: the first ascii diff
- */
-void reserve_array(int *a, int n)
-{
-	int i, j, t;
 
-	for (i = 0, j = (n - 1); i < j; i++, j--)
+/**
+ * reverse_array - reverse array
+ * @a: an array of integers
+ * @n: the number of elements to swap
+ *
+ * Return: nothing.
+ */
+void reverse_array(int *a, int n)
+{
+	int i;
+	int help;
+
+	i = 0;
+	n--;
+	while (i <= n)
 	{
-		t = a[i];
-		a[i] = a[j];
-		a[j] = t;
+		help = a[i];
+		a[i] = a[n];
+		a[n] = help;
+		i++;
+		n--;
 	}
 }
