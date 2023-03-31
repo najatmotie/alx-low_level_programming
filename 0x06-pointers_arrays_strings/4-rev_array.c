@@ -5,12 +5,14 @@
  * @s2: parametre
  * Return: the first ascii diff
  */
-int _strcmp(char *s1, char *s2)
+void reserve_array(int *a, int n)
 {
-	int i;
+	int i, j, t;
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
-		i++;
-	return (s1[i] - s2[i]);
+	for (i = 0, j = (n - 1); i < j; i++, j--)
+	{
+		t = a[i];
+		a[i] = a[j];
+		a[j] = t;
+	}
 }
